@@ -45,9 +45,21 @@ def check_prime_numbers():
     return sadeededler
                 
         
-
+# test the function
 
 print(check_prime_numbers())
+
+# filter() funksiyasını istifadə edərək yuxarıdakı funksiyanı yenidən yazın.
+def check_prime_numbers_filter():
+    numbers = []
+    for _ in range(6):
+        num = int(input("Tam ədəd daxil edin: "))
+        numbers.append(num)
+        
+    is_prime = lambda num: sum(1 for x in range(1, num + 1) if num % x == 0) == 2
+    prime_numbers = list(filter(is_prime, numbers))
+    
+    return prime_numbers
 
 
 
